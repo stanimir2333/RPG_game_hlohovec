@@ -15,6 +15,7 @@ namespace RPG_game
             string trieda1 = "obyvatel";
             string trieda2 = "billa_pracovnik";
             string trieda3 = "lidl_pracovnik";
+            string trieda4 = "zivnostnik";
             string idem = "idem";
             string nejdem = "nejdem";
             string nic = "nic";
@@ -22,9 +23,9 @@ namespace RPG_game
             string[] triedy = {trieda1, trieda2, trieda3};
             string necham_ho = "necham_ho";
             string chytim_ho = "chytim_ho";
-            Console.WriteLine($"vyber si povolanie > {trieda1}, {trieda2}, {trieda3} <");
+            Console.WriteLine($"vyber si povolanie > {trieda1}, {trieda2}, {trieda3}, {trieda4} <");
             string povolanie= Console.ReadLine();
-            while (povolanie != trieda1 && povolanie != trieda2 && povolanie != trieda3)
+            while (povolanie != trieda1 && povolanie != trieda2 && povolanie != trieda3 && povolanie != trieda4)
             {
                 Console.WriteLine("nauc sa pisat");
                 povolanie = Console.ReadLine();
@@ -107,6 +108,32 @@ namespace RPG_game
                 {
                     Console.WriteLine("prichitil si to decko, zavolal si policiu slovenskej republiky, navyse ti sefova zvisila vyplatu, a to sa oplati");
                     Console.WriteLine("stlac hocico na exit");
+                    Console.ReadKey();
+                }
+
+            }
+            if (povolanie == trieda4)
+            {
+                Console.WriteLine($"vybral si si {trieda4}, stlac lubovolnu klavesu na pokracovanie");
+                Console.ReadKey();
+                Console.WriteLine("si zivnostnik, dosiel ti danovy list, co urobis?");
+                Console.WriteLine("napis <zaplatis> <zahodis>");
+                string vyber4 = Console.ReadLine();
+                while (vyber4 != idem && vyber4 != nejdem && vyber4 != nic && vyber4 != hadat_sa && vyber4 != necham_ho && vyber4 != chytim_ho && vyber4 != "zaplatis" && vyber4 != "zahodis")
+                {
+                    Console.WriteLine("nevies pisat, skus znova");
+                    vyber4 = Console.ReadLine() ;
+                }
+                if (vyber4 == "zaplatis")
+                {
+                    Console.WriteLine("urobil si asi dobre pre svoje dusevne zdravie ,no strata bola velka, skrachoval si");
+                    Console.WriteLine("stlac hocico pre exit");
+                    Console.ReadKey();
+                }
+                else if (vyber4 == "zahodis")
+                {
+                    Console.WriteLine("zahodil si danovy list, to neni dobre, dosla policia slovenskej republiky. ides do vrazenia na zivot");
+                    Console.WriteLine("stlac hocico pre exit");
                     Console.ReadKey();
                 }
 

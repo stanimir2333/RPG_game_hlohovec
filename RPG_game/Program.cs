@@ -132,7 +132,7 @@ namespace RPG_game
                 }
                 else if (vyber4 == "zahodis")
                 {
-                    Console.WriteLine("zahodil si danovy list, to neni dobre, dosla policia slovenskej republiky. ides do vrazenia na zivot");
+                    Console.WriteLine("zahodil si danovy list, to neni dobre, dosla policia slovenskej republiky. ides do vazenia na zivot");
                     Console.WriteLine("stlac hocico pre exit");
                     Console.ReadKey();
                 }
